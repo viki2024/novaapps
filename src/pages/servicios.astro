@@ -68,35 +68,6 @@ import Layout from '../layouts/Layout.astro';
 </Layout>
 
 <style>
-  body {
-    margin: 0;
-    font-family: var(--font-inter), Arial, sans-serif;
-    background-color: #f5f6ff;
-  }
-
-  h1, h2, h3 {
-    font-family: var(--font-poppins), Arial, sans-serif;
-  }
-  .enlace-logo {
-    display: flex;
-    align-items: center;
-  }
-
-  .enlace-logo :global(img) {
-    width: 160px;
-    height: auto;
-  }
-
-  nav {
-    display: flex;
-    gap: 30px;
-    margin-left: auto;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-  }
 
   main {
     padding: 40px;
@@ -193,17 +164,6 @@ import Layout from '../layouts/Layout.astro';
   }
 
   @media (max-width: 768px) {
-    header {
-      padding: 15px 20px;
-    }
-
-    .enlace-logo :global(img) {
-      width: 130px;
-    }
-
-    nav {
-      display: none;
-    }
 
     main {
       padding: 20px;

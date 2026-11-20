@@ -1,6 +1,6 @@
 
 ---
-import { Image, Font } from 'astro:assets';
+import { Image } from 'astro:assets';
 import Layout from '../layouts/Layout.astro';
 import kanban from '../assets/kanban.png';
 import software from '../assets/software.png';
@@ -163,7 +163,7 @@ import empresa from '../assets/empresa.png';
 <style>
 
 
-  main {
+main {
     padding: 60px 40px;
   }
 
@@ -357,24 +357,8 @@ import empresa from '../assets/empresa.png';
   font-size: 18px;
   line-height: 1.7;
 }
-body {
-  margin: 0;
-  font-family: var(--font-inter), Arial, sans-serif;
-  background-color: #f5f6ff;
-}
-
-h1, h2, h3 {
-  font-family: var(--font-poppins), Arial, sans-serif;
-}
 
 @media (max-width: 768px) {
-  header {
-    padding: 15px 20px;
-  }
-
-  nav {
-    display: none;
-  }
 
   main {
     padding: 30px 20px;
