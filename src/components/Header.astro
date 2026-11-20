@@ -1,0 +1,64 @@
+
+---
+import { Image } from 'astro:assets';
+import logo from '../assets/logo-novaapps.png';
+---
+
+<header>
+  <a href="/" class="enlace-logo" aria-label="Ir al inicio de NovaApps">
+    <Image src={logo} alt="Logo de NovaApps" />
+  </a>
+
+  <nav>
+    <a href="/">Inicio</a>
+    <a href="/quienes-somos">Quiénes somos</a>
+    <a href="/servicios">Servicios y precios</a>
+  </nav>
+</header>
+
+<style>
+  header {
+    display: flex;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #15133c;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  .enlace-logo {
+    display: flex;
+    align-items: center;
+  }
+
+  .enlace-logo :global(img) {
+    width: 160px;
+    height: auto;
+  }
+
+  nav {
+    display: flex;
+    gap: 30px;
+    margin-left: auto;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+  }
+
+  @media (max-width: 768px) {
+    header {
+      padding: 15px 20px;
+    }
+
+    .enlace-logo :global(img) {
+      width: 130px;
+    }
+
+    nav {
+      display: none;
+    }
+  }
+</style>

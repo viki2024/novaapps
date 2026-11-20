@@ -1,0 +1,40 @@
+
+---
+import { Font } from 'astro:assets';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+
+const { titulo } = Astro.props;
+---
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{titulo}</title>
+
+    <Font cssVariable="--font-poppins" />
+    <Font cssVariable="--font-inter" />
+  </head>
+
+  <body>
+    <Header />
+
+    <slot />
+
+    <Footer />
+  </body>
+</html>
+
+<style is:global>
+  body {
+    margin: 0;
+    font-family: var(--font-inter), Arial, sans-serif;
+    background-color: #f5f6ff;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-poppins), Arial, sans-serif;
+  }
+</style>

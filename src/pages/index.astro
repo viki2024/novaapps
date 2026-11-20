@@ -1,16 +1,407 @@
----
----
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+---
+import { Image, Font } from 'astro:assets';
+import Layout from '../layouts/Layout.astro';
+import kanban from '../assets/kanban.png';
+import software from '../assets/software.png';
+import marketing from '../assets/marketing.png';
+import empresa from '../assets/empresa.png';
+
+---
+<Layout titulo="NovaApps | Gestión de proyectos">
+<main>
+  <section class="presentacion">
+    <div class="contenido-presentacion">
+      <h1>Transforma la forma de gestionar tus proyectos</h1>
+
+      <p>
+        Organiza tus tareas, colabora con tu equipo y
+        alcanza tus objetivos con NovaApps.
+      </p>
+
+      <a href="/servicios" class="boton">
+        Descubre NovaApps
+      </a>
+    </div>
+	<div class="imagen-presentacion">
+		<Image
+			src={kanban}
+			alt="Tablero Kanban de NovaApps con tareas organizadas en post-it de colores"
+			widths={[400, 800, 1200]}
+			sizes="(max-width: 768px) 100vw, 50vw"
+		/>
+	</div>
+  </section>
+
+<section class="acerca">
+  <h2>Una plataforma, todos tus proyectos</h2>
+
+  <p>
+    NovaApps es una plataforma de gestión de proyectos
+    diseñada para ayudar a los equipos a organizar
+    tareas, colaborar y alcanzar sus objetivos.
+  </p>
+
+  <p>
+    Integra herramientas de planificación, tableros
+    Kanban, seguimiento de avances e inteligencia
+    artificial para facilitar el trabajo diario.
+  </p>
+
+  <a href="/quienes-somos" class="boton">
+    Conoce más sobre nosotros
+  </a>
+</section>
+
+<section class="funcionamiento">
+  <h2>Organiza tus proyectos en 3 pasos</h2>
+
+  <p>
+    Visualiza el avance de cada tarea y organiza
+    el trabajo de tu equipo con NovaApps.
+  </p>
+
+  <div class="tablero-kanban">
+    <div class="columna-kanban">
+      <h3>Por hacer</h3>
+      <div class="nota rosa">Diseñar interfaz</div>
+      <div class="nota azul">Definir tareas</div>
+    </div>
+
+    <div class="columna-kanban">
+      <h3>En progreso</h3>
+      <div class="nota amarilla">Desarrollar web</div>
+      <div class="nota naranja">Crear contenido</div>
+    </div>
+
+    <div class="columna-kanban">
+      <h3>Completado</h3>
+      <div class="nota verde">Planificar proyecto</div>
+      <div class="nota morada">Revisar resultados</div>
+    </div>
+  </div>
+</section>
+
+<section class="proyectos">
+  <h2>Proyectos que puedes gestionar con NovaApps</h2>
+
+  <p>
+    Una plataforma flexible para diferentes tipos
+    de equipos y proyectos.
+  </p>
+
+  <div class="contenedor-proyectos">
+
+    <article class="tarjeta-proyecto">
+	<Image
+		src={software}
+		alt="Equipo trabajando en desarrollo de software"
+		widths={[400, 800]}
+		sizes="(max-width: 768px) 100vw, 33vw"
+	/>
+      <h3>Desarrollo de software</h3>
+      <p>
+        Organiza las etapas de desarrollo, asigna tareas
+        y supervisa los avances de tu equipo.
+      </p>
+    </article>
+
+    <article class="tarjeta-proyecto">
+    <Image
+		src={marketing}
+		alt="Materiales para planificar una campaña de marketing"
+		widths={[400, 800]}
+		sizes="(max-width: 768px) 100vw, 33vw"
+		/>
+      <h3>Campañas de marketing</h3>
+      <p>
+        Coordina contenidos, fechas de publicación
+        y actividades de tus campañas.
+      </p>
+    </article>
+
+    <article class="tarjeta-proyecto">
+  	<Image
+		src={empresa}
+		alt="Equipo organizando un proyecto empresarial"
+		widths={[400, 800]}
+		sizes="(max-width: 768px) 100vw, 33vw"
+		/>
+      <h3>Gestión empresarial</h3>
+      <p>
+        Planifica recursos, distribuye responsabilidades
+        y controla los objetivos de tu organización.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<section class="video-seccion">
+  <h2>Descubre cómo funciona Kanban</h2>
+
+  <p>
+    Conoce cómo organizar tareas, visualizar avances
+    y mejorar el trabajo en equipo mediante Kanban.
+  </p>
+
+
+<div class="contenedor-video">
+  <iframe
+    src="https://www.youtube.com/embed/w-st9fGVM3c"
+    title="Video explicativo de la metodología Kanban"
+    loading="lazy"
+    allowfullscreen>
+  </iframe>
+</div>
+
+</section>
+
+</main>
+</Layout>
+
+<style>
+
+
+  main {
+    padding: 60px 40px;
+  }
+
+.presentacion {
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+  padding: 40px;
+  background-color: #f1eeff;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contenido-presentacion {
+  flex: 1;
+  min-width: 0;
+  max-width: 600px;
+}
+
+.imagen-presentacion {
+  flex: 1;
+  min-width: 0;
+}
+
+.imagen-presentacion img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+}
+
+.presentacion h1 {
+  font-size: 42px;
+  color: #4936cb;
+}
+
+.presentacion p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #353052;
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 25px;
+  background-color: #4936cb;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+}
+
+.funcionamiento {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.funcionamiento h2 {
+  color: #4936cb;
+  font-size: 32px;
+}
+
+.funcionamiento p {
+  color: #353052;
+  margin-bottom: 35px;
+}
+
+.tablero-kanban {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.columna-kanban {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+}
+
+.columna-kanban h3 {
+  color: #15133c;
+}
+
+.nota {
+  padding: 20px 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  color: #252038;
+}
+
+.rosa { background-color: #f8c8dc; }
+.azul { background-color: #b9ddf5; }
+.amarilla { background-color: #fff0a8; }
+.naranja { background-color: #ffd1a6; }
+.verde { background-color: #c8edc6; }
+.morada { background-color: #ddd0fa; }
+
+.proyectos {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.proyectos h2 {
+  color: #4936cb;
+  font-size: 32px;
+}
+
+.proyectos > p {
+  color: #353052;
+  margin-bottom: 35px;
+}
+
+.contenedor-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+.tarjeta-proyecto {
+  background-color: white;
+  border-radius: 12px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.tarjeta-proyecto :global(img) {
+  display: block;
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+}
+
+.tarjeta-proyecto h3 {
+  color: #4936cb;
+  padding: 0 20px;
+}
+
+.tarjeta-proyecto p {
+  color: #353052;
+  line-height: 1.6;
+  padding: 0 20px 20px;
+}
+ 
+.video-seccion {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f1eeff;
+  border-radius: 16px;
+}
+
+.video-seccion h2 {
+  color: #4936cb;
+  font-size: 32px;
+}
+
+.video-seccion p {
+  color: #353052;
+  margin-bottom: 30px;
+}
+
+.contenedor-video {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  aspect-ratio: 16 / 9;
+}
+
+.contenedor-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 12px;
+}
+
+.acerca {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.acerca h2 {
+  color: #4936cb;
+  font-size: 32px;
+}
+
+.acerca p {
+  color: #353052;
+  font-size: 18px;
+  line-height: 1.7;
+}
+body {
+  margin: 0;
+  font-family: var(--font-inter), Arial, sans-serif;
+  background-color: #f5f6ff;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-poppins), Arial, sans-serif;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 15px 20px;
+  }
+
+  nav {
+    display: none;
+  }
+
+  main {
+    padding: 30px 20px;
+  }
+
+  .presentacion {
+    flex-direction: column;
+    padding: 30px 20px;
+    min-height: 300px;
+  }
+
+  .presentacion h1 {
+    font-size: 30px;
+  }
+
+  .presentacion p {
+    font-size: 16px;
+  }
+
+  .imagen-presentacion {
+    width: 100%;
+  }
+  .tablero-kanban {
+  grid-template-columns: 1fr;
+  }
+  .contenedor-proyectos {
+  grid-template-columns: 1fr;
+  }
+}
+</style>

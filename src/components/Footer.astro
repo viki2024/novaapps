@@ -1,0 +1,97 @@
+
+<footer>
+  <div class="contenido-footer">
+    <div class="informacion">
+      <h2>NovaApps</h2>
+      <p>
+        Gestión de proyectos para equipos de trabajo que quieren
+        transformar sus ideas en resultados.
+      </p>
+    </div>
+
+    <div class="enlaces">
+      <h3>Enlaces rápidos</h3>
+      <nav>
+        <a href="/">Inicio</a>
+        <a href="/quienes-somos">Quiénes somos</a>
+        <a href="/servicios">Servicios y precios</a>
+      </nav>
+    </div>
+  </div>
+
+  <div class="derechos">
+    <p>© 2026 NovaApps | TechNova Group</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    background-color: #15133c;
+    color: white;
+    padding: 20px 30px 10px;
+  }
+
+  .contenido-footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .informacion {
+    max-width: 400px;
+  }
+
+  .informacion h2 {
+    color: #60ded4;
+  }
+
+  .informacion p {
+    line-height: 1.6;
+    color: #d4d2e8;
+  }
+
+  .enlaces h3 {
+    color: white;
+  }
+
+  .enlaces nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .enlaces a {
+    color: #d4d2e8;
+    text-decoration: none;
+  }
+
+  .enlaces a:hover {
+    color: #60ded4;
+  }
+
+  .derechos {
+    text-align: center;
+    border-top: 1px solid #49466c;
+    margin-top: 15px;
+    padding-top: 10px;
+    color: #d4d2e8;
+    font-size: 14px;
+  }
+  .informacion h2,
+.enlaces h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+  .informacion p,
+  .derechos p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+  @media (max-width: 768px) {
+    .contenido-footer {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+</style>
