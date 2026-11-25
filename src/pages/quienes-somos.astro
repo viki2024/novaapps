@@ -1,68 +1,69 @@
 ---
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import equipo from "../assets/equipo-quienessomos.jpg";
 ---
 
-  <Layout titulo="Quiénes somos | NovaApps">
-    <main>
-      <section class="nosotros">
-        <h1>¿Quiénes somos?</h1>
+<Layout titulo="Quiénes somos | NovaApps">
+  <main>
+    <section class="nosotros">
+      <h1>¿Quiénes somos?</h1>
+      <Image
+        src={equipo}
+        alt="Equipo de trabajo de NovaApps"
+        class="imagen-equipo"
+      />
+      <p>
+        Somos TechNova Group, una empresa dedicada al desarrollo de soluciones
+        tecnológicas que facilitan el trabajo de las organizaciones.
+      </p>
 
+      <p>
+        Creamos NovaApps para ayudar a pequeñas y medianas empresas a organizar
+        sus proyectos, mejorar la colaboración y optimizar sus procesos.
+      </p>
+    </section>
+
+    <section class="mision-vision">
+      <article class="tarjeta">
+        <h2>Nuestra misión</h2>
         <p>
-          Somos TechNova Group, una empresa dedicada
-          al desarrollo de soluciones tecnológicas
-          que facilitan el trabajo de las organizaciones.
+          Ofrecer herramientas tecnológicas accesibles que permitan gestionar
+          proyectos de manera sencilla, eficiente y colaborativa.
         </p>
+      </article>
 
+      <article class="tarjeta">
+        <h2>Nuestra visión</h2>
         <p>
-          Creamos NovaApps para ayudar a pequeñas y
-          medianas empresas a organizar sus proyectos,
-          mejorar la colaboración y optimizar sus procesos.
+          Ser una plataforma reconocida por ayudar a las empresas a transformar
+          sus ideas en proyectos organizados y exitosos.
         </p>
-      </section>
+      </article>
+    </section>
 
-      <section class="mision-vision">
-        <article class="tarjeta">
-          <h2>Nuestra misión</h2>
-          <p>
-            Ofrecer herramientas tecnológicas accesibles
-            que permitan gestionar proyectos de manera
-            sencilla, eficiente y colaborativa.
-          </p>
+    <section class="valores">
+      <h2>Nuestros valores</h2>
+
+      <div class="contenedor-valores">
+        <article class="valor">
+          <h3>Innovación</h3>
+          <p>Buscamos soluciones que simplifiquen el trabajo diario.</p>
         </article>
 
-        <article class="tarjeta">
-          <h2>Nuestra visión</h2>
-          <p>
-            Ser una plataforma reconocida por ayudar
-            a las empresas a transformar sus ideas
-            en proyectos organizados y exitosos.
-          </p>
+        <article class="valor">
+          <h3>Colaboración</h3>
+          <p>Creemos en el trabajo en equipo y la comunicación.</p>
         </article>
-      </section>
 
-      <section class="valores">
-        <h2>Nuestros valores</h2>
-
-        <div class="contenedor-valores">
-          <article class="valor">
-            <h3>Innovación</h3>
-            <p>Buscamos soluciones que simplifiquen el trabajo diario.</p>
-          </article>
-
-          <article class="valor">
-            <h3>Colaboración</h3>
-            <p>Creemos en el trabajo en equipo y la comunicación.</p>
-          </article>
-
-          <article class="valor">
-            <h3>Compromiso</h3>
-            <p>Nos enfocamos en entregar herramientas útiles y confiables.</p>
-          </article>
-        </div>
-      </section>
-    </main>
- </Layout>
-
+        <article class="valor">
+          <h3>Compromiso</h3>
+          <p>Nos enfocamos en entregar herramientas útiles y confiables.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+</Layout>
 
 <style>
   main {
@@ -92,17 +93,20 @@ import Layout from '../layouts/Layout.astro';
     gap: 25px;
   }
 
-  .tarjeta, .valor {
+  .tarjeta,
+  .valor {
     background-color: white;
     padding: 30px;
     border-radius: 12px;
   }
 
-  .tarjeta h2, .valor h3 {
+  .tarjeta h2,
+  .valor h3 {
     color: #4936cb;
   }
 
-  .tarjeta p, .valor p {
+  .tarjeta p,
+  .valor p {
     color: #353052;
     line-height: 1.6;
   }
@@ -123,9 +127,15 @@ import Layout from '../layouts/Layout.astro';
     gap: 25px;
     margin-top: 30px;
   }
-
+  .imagen-equipo {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+    margin: 20px auto;
+  }
   @media (max-width: 768px) {
-
     main {
       padding: 20px;
     }
